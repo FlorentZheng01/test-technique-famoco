@@ -1,0 +1,42 @@
+<h3>Users management > create new user</h3>
+
+<form (ngSubmit)="userRegister()" [formGroup]="registerForm" >
+   
+   
+    <div class="formulaire">
+        <fieldset>
+        <legend>Create new user</legend>
+
+
+        <div class="form-input">
+            <label for="userId">Login :</label>
+            <input type="text" id="userid" name="userid"  class="form-control" formControlname="userId" placeholder="Login" [(ngModel)]="user.userId" [ngModelOptions]="{standalone: true}"
+            >
+        </div>
+        <div class="form-input">
+            <label for="firstname">Firstname :</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" formControlname="firstname"  placeholder="Firstname"[(ngModel)]="user.firstname" [ngModelOptions]="{standalone: true}"
+            >
+        </div>
+        <div class="form-input"> 
+            <label for="lastname">Lastname :</label>
+            <input type="text" id="lastname" name="lastname" class="form-control"formControlname="lastname" placeholder="Lastname" [(ngModel)]="user.lastname" [ngModelOptions]="{standalone: true}"
+            >
+        </div>
+        <div class="form-input">
+            <label for="email" class ="label-form">Email :</label>
+            <input type="text" id="email" name="email" class="form-control" formControlname="email" placeholder="Email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"
+            >
+        </div>
+        <div class="form-input">
+           
+        </div>
+        </fieldset>
+        <button type="submit"  class="btn btn-primary">Submit</button>
+
+    </div>
+
+
+
+</form>
+
